@@ -155,6 +155,69 @@
         <span>03</span>
         <h2>Stages réalisés</h2>
       </div>
+      <div class="stage-card">
+        <header class="stage-header">
+          <div class="company-info">
+            <h3>STAGE 1 — OCI (Groupe OCI – agence Nantes Saint-Herblain)</h3>
+            <p class="muted"><strong>Période :</strong> 6 semaines – 2025/2026 &nbsp;•&nbsp; <strong>Secteur :</strong> Prestataire informatique (infogérance, réseau, cybersécurité, cloud)</p>
+            <p class="muted"><strong>Maître de stage :</strong> M. Cédric Honnoré (Responsable Opérationnel Gestion des Incidents)</p>
+          </div>
+          <div class="stage-actions">
+            <a class="button" href="https://github.com/darkyttv/portfoliodorian/blob/main/SISR26_LEGRAET_Dorian_RapportStage_Stage1.pdf" target="_blank" rel="noopener" id="open-rapport">Voir le rapport</a>
+          </div>
+        </header>
+
+        <div class="missions">
+          <article class="mission">
+            <h4 class="mission-title">Mission 1 — Déploiement d'un nouvel outil de ticketing (Hub)</h4>
+            <div class="mission-body">
+              <ul>
+                <li>Tests fonctionnels et détection de bugs</li>
+                <li>Vérification de la synchronisation avec l'ancien outil (Oxygène)</li>
+                <li>Rédaction d'un document de procédure</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">migration d'outil métier</span>
+                <span class="badge">méthode de test</span>
+                <span class="badge">rédaction technique</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="mission">
+            <h4 class="mission-title">Mission 2 — Récupération des adresses MAC et numéros de série sur 200 postes</h4>
+            <div class="mission-body">
+              <ul>
+                <li>Création d'un script PowerShell sur clé USB</li>
+                <li>Optimisation du lancement (D:\go)</li>
+                <li>Automatisation partielle via Windows PE</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">scripting PowerShell</span>
+                <span class="badge">automatisation</span>
+                <span class="badge">Windows PE</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-panel skills-panel">
+          <div class="section-header">
+            <span>Compétences observées</span>
+            <h2></h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">Support N1 — imprimantes, Wi‑Fi, sauvegardes</div>
+            <div class="skill-card">Admin N2 — Stormshield, Palo Alto, DMZ</div>
+            <div class="skill-card">Switch — running/startup config</div>
+            <div class="skill-card">Architectes N3 — MDT, Intune</div>
+            <div class="skill-card">Admin Cloud — sauvegardes, snapshots, Linux</div>
+            <div class="skill-card">SOC — EDR WithSecure, VirusTotal</div>
+            <div class="skill-card">Careplus — anti‑phishing, Kasm</div>
+            <div class="skill-card">Vidéosurveillance</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section-panel alt" id="projects">
@@ -267,5 +330,18 @@
       <a href="https://linkedin.com">LinkedIn</a>
     </div>
   </footer>
+  <script>
+    // Petit script pour permettre le repli des missions sur mobile
+    (function(){
+      const titles = document.querySelectorAll('.mission-title');
+      titles.forEach(t => {
+        t.addEventListener('click', () => {
+          const mission = t.closest('.mission');
+          if (!mission) return;
+          mission.classList.toggle('collapsed');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
